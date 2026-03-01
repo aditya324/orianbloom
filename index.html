@@ -282,6 +282,32 @@
         flex-direction: column;
         justify-content: center;
       }
+
+      .whatsapp-sticky {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 40px;
+        right: 40px;
+        background-color: #25d366;
+        color: #fff;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 35px;
+        box-shadow: 2px 2px 3px #999;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .whatsapp-sticky:hover {
+        background-color: #128c7e;
+        color: #fff;
+        transform: scale(1.1);
+      }
     </style>
   </head>
   <body>
@@ -670,6 +696,9 @@
                 <li class="text1">
                   <i class="circle fa-duotone fa-check"></i>Website Design &
                   Development
+                </li>
+                <li class="text1">
+                  <i class="circle fa-duotone fa-check"></i>Performance Marketing 
                 </li>
                 <li class="text1">
                   <i class="circle fa-duotone fa-check"></i>Social Media
@@ -1086,7 +1115,6 @@
                           <span>”</span>
                         </p>
                         <div class="content">
-                          
                           <div class="designation-outer">
                             <span>Riya Sharma</span>
                             <p class="text-size-16 mb-0">
@@ -1111,7 +1139,6 @@
                           <span>”</span>
                         </p>
                         <div class="content">
-                         
                           <div class="designation-outer">
                             <span>Arjun Mehta</span>
                             <p class="text-size-16 mb-0">CEO - Urban Threads</p>
@@ -1134,7 +1161,6 @@
                           <span>”</span>
                         </p>
                         <div class="content">
-                         
                           <div class="designation-outer">
                             <span>Neha Patel</span>
                             <p class="text-size-16 mb-0">
@@ -1157,7 +1183,6 @@
                           <span>”</span>
                         </p>
                         <div class="content">
-                         
                           <div class="designation-outer">
                             <span>Arjun Sharma</span>
                             <p class="text-size-16 mb-0">
@@ -1180,7 +1205,6 @@
                           <span>”</span>
                         </p>
                         <div class="content">
-                          
                           <div class="designation-outer">
                             <span>Sarah Jenkins</span>
                             <p class="text-size-16 mb-0">
@@ -1296,7 +1320,7 @@
           <div class="col-lg-6 col-md-12 col-sm-12 col-12">
             <div class="contact_content">
               <div class="heading">
-                <h5 style="color: white;">Get in Touch</h5>
+                <h5 style="color: white">Get in Touch</h5>
                 <h2>Send us a Message</h2>
               </div>
               <form id="contactpage" method="POST" action="./contact-form.php">
@@ -1412,6 +1436,14 @@
         </div>
       </div>
     </section>
+
+    <a
+      href="https://wa.me/8296823200?text=I'm%20interested%20in%20your%20services"
+      class="whatsapp-sticky"
+      target="_blank"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
     <!-- Footer -->
     <div class="web_traffic_footer">
       <div class="footer-section">
@@ -1526,9 +1558,9 @@
                     <li class="text">
                       <i class="fa fa-envelope fa-icon footer-location"></i>
                       <a
-                        href="mailto:info@OrionBloom.com"
+                        href="mailto:info@orionbloom.com"
                         class="mb-0 text text-decoration-none text-size-16"
-                        >info@OrionBloom.com</a
+                        >info@orionbloom.com</a
                       >
                     </li>
                     <li class="text">
