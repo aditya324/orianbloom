@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zxx">
   <head>
     <title>Home</title>
@@ -109,6 +109,18 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script
       src="https://kit.fontawesome.com/a076d05399.js"
       crossorigin="anonymous"
@@ -255,6 +267,21 @@
           border-radius: 5px;
         }
       }
+
+      /* Ensure the slides don't stack weirdly */
+      .text-slider {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+      }
+
+      /* Optional: Smooth transition for the height if slides have different text lengths */
+      .text-slider .swiper-slide {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
     </style>
   </head>
   <body>
@@ -346,28 +373,66 @@
       <div class="container position-relative">
         <div class="row">
           <div class="col-lg-6 col-md-8 col-sm-12">
-            <div class="banner_content">
-              <h1>Increase Your Web Traffic with Expert Team</h1>
-              <p>
-                Ensuring the best return on investment for your bespoke SEO
-                campaign requirement.
-              </p>
-              <a class="get_started" href="./contact.html">Get Started</a>
-              <a class="how_it_works" href="./about.html">How It Works?</a>
+            <div class="swiper text-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="banner_content">
+                    <h1>Increase Your Web Traffic with Expert Team</h1>
+                    <p>
+                      Ensuring the best return on investment for your bespoke
+                      SEO campaign requirement.
+                    </p>
+                    <a class="get_started" href="./contact.html">Get Started</a>
+                    <a class="how_it_works" href="./about.html"
+                      >How It Works?</a
+                    >
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="banner_content">
+                    <h1>Rank Higher on Search Engines</h1>
+                    <p>
+                      Customized digital marketing strategies tailored to your
+                      unique business goals.
+                    </p>
+                    <a class="get_started" href="./contact.html">Free Audit</a>
+                    <a class="how_it_works" href="./about.html">Learn More</a>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="banner_content">
+                    <h1>Data-Driven Growth Strategies</h1>
+                    <p>
+                      We use advanced analytics to ensure every click turns into
+                      a customer.
+                    </p>
+                    <a class="get_started" href="./contact.html">Start Now</a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- <a href="#dropdown" class="top-btn">
-        <figure class="banner-dropdownimage mb-0">
-          <img
-            src="./assets/images/banner-dropdownimage.png"
-            class="img-fluid"
-            alt="Scroll Down"
-          />
-        </figure>
-      </a> -->
     </section>
+
+    <script>
+      var swiper = new Swiper(".text-slider", {
+        spaceBetween: 30,
+        effect: "fade", // Makes text transition smooth
+        loop: true,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        fadeEffect: {
+          crossFade: true, // Prevents text overlapping during transition
+        },
+      });
+    </script>
+
     <!-- Partner -->
     <!-- <section class="web_partner-section">
     <div class="container">
@@ -420,9 +485,10 @@
             <div class="col-lg-5 col-md-12 col-sm-12 col-12">
               <div class="text">
                 <p class="mb-0">
-                  Duis aute irure dolor in reprehendeirure dolor irit in volut
-                  ate velit esse cillum dolDuis aute irure dolor in ore accu
-                  santium fugiat nulla pariatur.
+                  Drive targeted organic traffic to your website with proven SEO
+                  strategies. Our expert team focuses on high-intent keywords
+                  that connect your brand with the right audience at the right
+                  time
                 </p>
               </div>
             </div>
@@ -548,18 +614,18 @@
           </div>
           <div class="col-lg-6 col-md-6 col-sm-12 col-12">
             <div class="progress_content">
-              <h5 style="color: white;">Discover Your Digital Edge</h5>
+              <h5 style="color: white">Discover Your Digital Edge</h5>
               <h2>
-                Elevate Your Brand with <span>OrianBloom</span> Innovation!
-
+                Elevate Your Brand with <span>OrionBloom</span> Innovation!
+<!-- 
                 <img
                   src="./assets/images/progress-headinglayer.png"
                   class="img-fluid"
                   alt=""
-                />
+                /> -->
               </h2>
               <p class="text">
-                At <strong>OrianBloom</strong>, we blend creativity, technology,
+                At <strong>OrionBloom</strong>, we blend creativity, technology,
                 and strategy to help your brand bloom online. From digital
                 marketing to smart web solutions, we deliver measurable growth
                 and lasting impact for your business.
@@ -587,17 +653,19 @@
           <div class="col-lg-7 col-md-6 col-sm-12 col-12 order-md-1 order-2">
             <div class="grow_content">
               <h5>Transform Your Digital Presence</h5>
-              <h2>Accelerate Growth with OrianBloom Solutions</h2>
+              <h2>Accelerate Growth with OrionBloom Solutions</h2>
               <p class="text">
-                At <strong>OrianBloom</strong>, we help your business thrive in
+                At <strong>OrionBloom</strong>, we help your business thrive in
                 the digital era. Our expert team combines creativity,
                 technology, and strategy to build experiences that attract
                 audiences, boost engagement, and drive measurable success.
               </p>
               <ul class="list-unstyled">
                 <li class="text1">
-                  <i class="circle fa-duotone fa-check"></i>Digital Marketing &
-                  SEO
+                  <i class="circle fa-duotone fa-check"></i>Digital Marketing 
+                </li>
+                <li class="text1">
+                  <i class="circle fa-duotone fa-check"></i>SEO
                 </li>
                 <li class="text1">
                   <i class="circle fa-duotone fa-check"></i>Website Design &
@@ -611,8 +679,9 @@
                   <i class="circle fa-duotone fa-check"></i>Branding & Creative
                   Strategy
                 </li>
+                
               </ul>
-              <a class="get_started" href="./about.html">Get Started</a>
+              <a class="get_started" href="./contact.html">Get Started</a>
             </div>
           </div>
           <div
@@ -658,7 +727,7 @@
         <div class="row">
           <div class="col-lg-3 col-md-6 col-sm-6 col-12">
             <div class="box">
-              <h6>Business Ideas</h6>
+              <h6>social media posts </h6>
               <figure class="business-icon">
                 <img
                   src="./assets/images/business-icon1.png"
@@ -667,14 +736,14 @@
                 />
               </figure>
               <div class="number">
-                <span class="value counter">2975</span>
+                <span class="value counter">10000</span>
                 <sup>+</sup>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6 col-12">
             <div class="box">
-              <h6>Media Posts</h6>
+              <h6>happy customer </h6>
               <figure class="business-icon">
                 <img
                   src="./assets/images/business-icon2.png"
@@ -683,7 +752,7 @@
                 />
               </figure>
               <div class="number">
-                <span class="value counter">1050</span>
+                <span class="value counter">250</span>
                 <sup>+</sup>
               </div>
             </div>
@@ -699,7 +768,7 @@
                 />
               </figure>
               <div class="number">
-                <span class="value counter">3545</span>
+                <span class="value counter">100</span>
                 <sup>+</sup>
               </div>
             </div>
@@ -715,7 +784,7 @@
                 />
               </figure>
               <div class="number">
-                <span class="value counter">7456</span>
+                <span class="value counter">1000</span>
                 <sup>+</sup>
               </div>
             </div>
@@ -729,7 +798,7 @@
         <div class="row">
           <div class="col-12">
             <div class="content">
-              <h5 style="color: white;">Why Choose Us</h5>
+              <h5 style="color: white">Why Choose Us</h5>
               <h2>Why SEO Service is Important For Your Business?</h2>
             </div>
           </div>
@@ -778,13 +847,13 @@
                       <figure class="choose-icon">
                         <img
                           src="./assets/images/choose-icon1.png"
-                          alt="Smart Link Building - OrianBloom"
+                          alt="Smart Link Building - OrionBloom"
                           class="img-fluid"
                         />
                       </figure>
                       <h4>Strategic Link Building</h4>
                       <p class="text-size-18">
-                        At <strong>OrianBloom</strong>, we focus on quality
+                        At <strong>OrionBloom</strong>, we focus on quality
                         backlinks and data-driven outreach strategies that
                         strengthen your website’s authority, boost rankings, and
                         generate steady organic traffic growth.
@@ -797,7 +866,7 @@
                       <figure class="choose-icon">
                         <img
                           src="./assets/images/choose-icon2.png"
-                          alt="Email Marketing - OrianBloom"
+                          alt="Email Marketing - OrionBloom"
                           class="img-fluid"
                         />
                       </figure>
@@ -819,7 +888,7 @@
                     <figure class="choose-icon">
                       <img
                         src="./assets/images/choose-icon3.png"
-                        alt="SEO Optimization - OrianBloom"
+                        alt="SEO Optimization - OrionBloom"
                         class="img-fluid"
                       />
                     </figure>
@@ -837,7 +906,7 @@
                     <figure class="choose-icon">
                       <img
                         src="./assets/images/choose-icon4.png"
-                        alt="Web Development - OrianBloom"
+                        alt="Web Development - OrionBloom"
                         class="img-fluid"
                       />
                     </figure>
@@ -990,173 +1059,174 @@
     </section> -->
     <!-- Testimonial -->
     <section class="web_testimonial-section">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-7 col-md-6 col-sm-12 col-12 order-md-1 order-2">
-        <div class="testimonial_content">
-          <div class="heading">
-            <h5>Testimonials</h5>
-            <h2>What Our Satisfied Clients Are Saying!</h2>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7 col-md-6 col-sm-12 col-12 order-md-1 order-2">
+            <div class="testimonial_content">
+              <div class="heading">
+                <h5>Testimonials</h5>
+                <h2>What Our Satisfied Clients Are Saying!</h2>
+              </div>
+              <div
+                id="webtestimonialcarousel"
+                class="carousel slide"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <!-- Testimonial 1 -->
+                  <div class="carousel-item active">
+                    <div class="testimonial-content position-relative">
+                      <div class="box-content">
+                        <p class="text">
+                          <span>“</span>
+                          OrionBloom completely transformed our digital
+                          presence. Their SEO and branding strategies helped us
+                          rank on the first page of Google within months. The
+                          team is creative, responsive, and truly understands
+                          modern business goals.
+                          <span>”</span>
+                        </p>
+                        <div class="content">
+                          <figure class="testimonial-contentimage mb-0">
+                            <img
+                              src="./assets/images/testimonial-contentimage.png"
+                              alt="Client testimonial - OrionBloom"
+                              class="img-fluid rounded-circle"
+                            />
+                          </figure>
+                          <div class="designation-outer">
+                            <span>Riya Sharma</span>
+                            <p class="text-size-16 mb-0">
+                              Founder - Bloom Interiors
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Testimonial 2 -->
+                  <div class="carousel-item">
+                    <div class="testimonial-content position-relative">
+                      <div class="box-content">
+                        <p class="text">
+                          <span>“</span>
+                          Working with OrionBloom was a game-changer for our
+                          eCommerce store. They redesigned our website and
+                          implemented marketing campaigns that doubled our
+                          conversions. Highly recommend their services!
+                          <span>”</span>
+                        </p>
+                        <div class="content">
+                          <figure class="testimonial-contentimage mb-0">
+                            <img
+                              src="./assets/images/testimonial-contentimage.png"
+                              alt="Client testimonial - OrionBloom"
+                              class="img-fluid rounded-circle"
+                            />
+                          </figure>
+                          <div class="designation-outer">
+                            <span>Arjun Mehta</span>
+                            <p class="text-size-16 mb-0">CEO - Urban Threads</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Testimonial 3 -->
+                  <div class="carousel-item">
+                    <div class="testimonial-content position-relative">
+                      <div class="box-content">
+                        <p class="text">
+                          <span>“</span>
+                          The OrionBloom team has been incredible to work with.
+                          Their creative designs and marketing expertise helped
+                          increase our online engagement and grow our brand
+                          faster than expected.
+                          <span>”</span>
+                        </p>
+                        <div class="content">
+                          <figure class="testimonial-contentimage mb-0">
+                            <img
+                              src="./assets/images/testimonial-contentimage.png"
+                              alt="Client testimonial - OrionBloom"
+                              class="img-fluid rounded-circle"
+                            />
+                          </figure>
+                          <div class="designation-outer">
+                            <span>Neha Patel</span>
+                            <p class="text-size-16 mb-0">
+                              Marketing Head - Zenith Technologies
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Carousel Controls -->
+                <div class="pagination-outer">
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#webtestimonialcarousel"
+                    data-bs-slide="prev"
+                  >
+                    <i class="fa-solid fa-arrow-left"></i>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#webtestimonialcarousel"
+                    data-bs-slide="next"
+                  >
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
+
+          <!-- Side Illustration -->
           <div
-            id="webtestimonialcarousel"
-            class="carousel slide"
-            data-bs-ride="carousel"
+            class="col-lg-5 col-md-6 col-sm-12 col-12 order-md-2 order-1 text-md-left text-center"
           >
-            <div class="carousel-inner">
-              <!-- Testimonial 1 -->
-              <div class="carousel-item active">
-                <div class="testimonial-content position-relative">
-                  <div class="box-content">
-                    <p class="text">
-                      <span>“</span>
-                      OrianBloom completely transformed our digital presence.
-                      Their SEO and branding strategies helped us rank on the
-                      first page of Google within months. The team is creative,
-                      responsive, and truly understands modern business goals.
-                      <span>”</span>
-                    </p>
-                    <div class="content">
-                      <figure class="testimonial-contentimage mb-0">
-                        <img
-                          src="./assets/images/testimonial-contentimage.png"
-                          alt="Client testimonial - OrianBloom"
-                          class="img-fluid rounded-circle"
-                        />
-                      </figure>
-                      <div class="designation-outer">
-                        <span>Riya Sharma</span>
-                        <p class="text-size-16 mb-0">Founder - Bloom Interiors</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Testimonial 2 -->
-              <div class="carousel-item">
-                <div class="testimonial-content position-relative">
-                  <div class="box-content">
-                    <p class="text">
-                      <span>“</span>
-                      Working with OrianBloom was a game-changer for our eCommerce
-                      store. They redesigned our website and implemented marketing
-                      campaigns that doubled our conversions. Highly recommend
-                      their services!
-                      <span>”</span>
-                    </p>
-                    <div class="content">
-                      <figure class="testimonial-contentimage mb-0">
-                        <img
-                          src="./assets/images/testimonial-contentimage.png"
-                          alt="Client testimonial - OrianBloom"
-                          class="img-fluid rounded-circle"
-                        />
-                      </figure>
-                      <div class="designation-outer">
-                        <span>Arjun Mehta</span>
-                        <p class="text-size-16 mb-0">
-                          CEO - Urban Threads
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Testimonial 3 -->
-              <div class="carousel-item">
-                <div class="testimonial-content position-relative">
-                  <div class="box-content">
-                    <p class="text">
-                      <span>“</span>
-                      The OrianBloom team has been incredible to work with.
-                      Their creative designs and marketing expertise helped
-                      increase our online engagement and grow our brand faster
-                      than expected.
-                      <span>”</span>
-                    </p>
-                    <div class="content">
-                      <figure class="testimonial-contentimage mb-0">
-                        <img
-                          src="./assets/images/testimonial-contentimage.png"
-                          alt="Client testimonial - OrianBloom"
-                          class="img-fluid rounded-circle"
-                        />
-                      </figure>
-                      <div class="designation-outer">
-                        <span>Neha Patel</span>
-                        <p class="text-size-16 mb-0">
-                          Marketing Head - Zenith Technologies
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Carousel Controls -->
-            <div class="pagination-outer">
-              <button
-                class="carousel-control-prev"
-                type="button"
-                data-bs-target="#webtestimonialcarousel"
-                data-bs-slide="prev"
-              >
-                <i class="fa-solid fa-arrow-left"></i>
-              </button>
-              <button
-                class="carousel-control-next"
-                type="button"
-                data-bs-target="#webtestimonialcarousel"
-                data-bs-slide="next"
-              >
-                <i class="fa-solid fa-arrow-right"></i>
-              </button>
+            <div class="testimonial_wrapper position-relative">
+              <figure class="testimonial-image mb-0">
+                <img
+                  src="./assets/images/homescreen.webp"
+                  class="img-fluid"
+                  alt="OrionBloom testimonials background"
+                />
+              </figure>
+              <figure class="testimonial-boximage1 mb-0">
+                <img
+                  src="./assets/images/contact-boximage1.png"
+                  class="img-fluid"
+                  alt=""
+                />
+              </figure>
+              <figure class="testimonial-boximage2 mb-0">
+                <img
+                  src="./assets/images/testimonial-boximage2.png"
+                  class="img-fluid"
+                  alt=""
+                />
+              </figure>
+              <figure class="testimonial-boximage3 mb-0">
+                <img
+                  src="./assets/images/contact-boximage3.png"
+                  class="img-fluid"
+                  alt=""
+                />
+              </figure>
             </div>
           </div>
         </div>
       </div>
-
-      <!-- Side Illustration -->
-      <div
-        class="col-lg-5 col-md-6 col-sm-12 col-12 order-md-2 order-1 text-md-left text-center"
-      >
-        <div class="testimonial_wrapper position-relative">
-          <figure class="testimonial-image mb-0">
-            <img
-              src="./assets/images/homescreen.webp"
-              class="img-fluid"
-              alt="OrianBloom testimonials background"
-            />
-          </figure>
-          <figure class="testimonial-boximage1 mb-0">
-            <img
-              src="./assets/images/contact-boximage1.png"
-              class="img-fluid"
-              alt=""
-            />
-          </figure>
-          <figure class="testimonial-boximage2 mb-0">
-            <img
-              src="./assets/images/testimonial-boximage2.png"
-              class="img-fluid"
-              alt=""
-            />
-          </figure>
-          <figure class="testimonial-boximage3 mb-0">
-            <img
-              src="./assets/images/contact-boximage3.png"
-              class="img-fluid"
-              alt=""
-            />
-          </figure>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
     <!-- Contact -->
     <section class="web_contact-section">
@@ -1316,155 +1386,154 @@
       </div>
     </section>
     <!-- Footer -->
-   <div class="web_traffic_footer">
-  <div class="footer-section">
-    <div class="container">
-      <div class="middle-portion">
-        <div class="row">
-          <!-- Logo and About -->
-          <div class="col-lg-6 col-md-5 col-sm-6 col-12">
-            <a href="./index.html">
-              <figure class="footer-logo">
-                <img
-                  src="./assets/images/LOGOOOO plain.png"
-                  class="img-fluid"
-                  alt="OrianBloom Logo"
-                />
-              </figure>
-            </a>
-            <p class="text-size-16 footer-text">
-              <strong>OrianBloom</strong> is a creative digital agency helping 
-              brands grow through innovative design, intelligent marketing, 
-              and cutting-edge web solutions. We blend creativity and strategy 
-              to help your business bloom online.
-            </p>
-            <ul class="list-unstyled mb-0 social-icons">
-              <li>
-                <a
-                  href="https://www.facebook.com/"
-                  target="_blank"
-                  class="text-decoration-none"
-                  ><i class="fa-brands fa-facebook-f social-networks"></i
-                ></a>
-              </li>
-              <li>
-                <a
-                  href="https://x.com/"
-                  target="_blank"
-                  class="text-decoration-none"
-                  ><i class="fa-brands fa-twitter social-networks"></i
-                ></a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/"
-                  target="_blank"
-                  class="text-decoration-none"
-                  ><i class="fa-brands fa-linkedin-in social-networks"></i
-                ></a>
-              </li>
-              <li>
-                <a
-                  href="https://www.instagram.com/"
-                  target="_blank"
-                  class="text-decoration-none"
-                  ><i class="fa-brands fa-instagram social-networks"></i
-                ></a>
-              </li>
-            </ul>
-          </div>
+    <div class="web_traffic_footer">
+      <div class="footer-section">
+        <div class="container">
+          <div class="middle-portion">
+            <div class="row">
+              <!-- Logo and About -->
+              <div class="col-lg-6 col-md-5 col-sm-6 col-12">
+                <a href="./index.html">
+                  <figure class="footer-logo">
+                    <img
+                      src="./assets/images/LOGOOOO plain.png"
+                      class="img-fluid"
+                      alt="OrionBloom Logo"
+                    />
+                  </figure>
+                </a>
+                <p class="text-size-16 footer-text">
+                  <strong>OrionBloom</strong> is a creative digital agency
+                  helping brands grow through innovative design, intelligent
+                  marketing, and cutting-edge web solutions. We blend creativity
+                  and strategy to help your business bloom online.
+                </p>
+                <ul class="list-unstyled mb-0 social-icons">
+                  <li>
+                    <a
+                      href="https://www.facebook.com/"
+                      target="_blank"
+                      class="text-decoration-none"
+                      ><i class="fa-brands fa-facebook-f social-networks"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://x.com/"
+                      target="_blank"
+                      class="text-decoration-none"
+                      ><i class="fa-brands fa-twitter social-networks"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/"
+                      target="_blank"
+                      class="text-decoration-none"
+                      ><i class="fa-brands fa-linkedin-in social-networks"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.instagram.com/"
+                      target="_blank"
+                      class="text-decoration-none"
+                      ><i class="fa-brands fa-instagram social-networks"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
 
-          <!-- Quick Links -->
-          <div class="col-lg-2 col-md-3 col-sm-12 col-12 d-md-block d-none">
-            <div class="links">
-              <ul class="list-unstyled mb-0">
-                <li>
-                  <i class="fa-solid fa-square-full"></i>
-                  <a
-                    href="./index.html"
-                    class="text-size-16 text text-decoration-none"
-                    >Home</a
-                  >
-                </li>
-                <li>
-                  <i class="fa-solid fa-square-full"></i>
-                  <a
-                    href="./about.html"
-                    class="text-size-16 text text-decoration-none"
-                    >About</a
-                  >
-                </li>
-                <li>
-                  <i class="fa-solid fa-square-full"></i>
-                  <a
-                    href="./service.html"
-                    class="text-size-16 text text-decoration-none"
-                    >Services</a
-                  >
-                </li>
-                <li>
-                  <i class="fa-solid fa-square-full"></i>
-                  <a
-                    href="./contact.html"
-                    class="text-size-16 text text-decoration-none"
-                    >Contact</a
-                  >
-                </li>
-              </ul>
+              <!-- Quick Links -->
+              <div class="col-lg-2 col-md-3 col-sm-12 col-12 d-md-block d-none">
+                <div class="links">
+                  <ul class="list-unstyled mb-0">
+                    <li>
+                      <i class="fa-solid fa-square-full"></i>
+                      <a
+                        href="./index.html"
+                        class="text-size-16 text text-decoration-none"
+                        >Home</a
+                      >
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-square-full"></i>
+                      <a
+                        href="./about.html"
+                        class="text-size-16 text text-decoration-none"
+                        >About</a
+                      >
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-square-full"></i>
+                      <a
+                        href="./service.html"
+                        class="text-size-16 text text-decoration-none"
+                        >Services</a
+                      >
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-square-full"></i>
+                      <a
+                        href="./contact.html"
+                        class="text-size-16 text text-decoration-none"
+                        >Contact</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Contact Info -->
+              <div class="col-lg-3 col-md-4 col-sm-6 col-12 d-sm-block">
+                <div class="icon">
+                  <ul class="list-unstyled mb-0">
+                    <li class="text">
+                      <i class="fa fa-phone fa-icon footer-location"></i>
+                      <a
+                        href="tel:+919876543210"
+                        class="mb-0 text text-decoration-none text-size-16"
+                        >+91 98765 43210</a
+                      >
+                    </li>
+                    <li class="text">
+                      <i class="fa fa-envelope fa-icon footer-location"></i>
+                      <a
+                        href="mailto:info@OrionBloom.com"
+                        class="mb-0 text text-decoration-none text-size-16"
+                        >info@OrionBloom.com</a
+                      >
+                    </li>
+                    <li class="text">
+                      <i
+                        class="fa-solid fa-location-dot footer-location footer-location3"
+                      ></i>
+                      <p class="text1 text-size-16">
+                        125, 5th Main Road, JP Nagar, Bengaluru, India
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Newsletter Signup -->
             </div>
           </div>
 
-          <!-- Contact Info -->
-          <div class="col-lg-3 col-md-4 col-sm-6 col-12 d-sm-block">
-            <div class="icon">
-              <ul class="list-unstyled mb-0">
-                <li class="text">
-                  <i class="fa fa-phone fa-icon footer-location"></i>
-                  <a
-                    href="tel:+919876543210"
-                    class="mb-0 text text-decoration-none text-size-16"
-                    >+91 98765 43210</a
-                  >
-                </li>
-                <li class="text">
-                  <i class="fa fa-envelope fa-icon footer-location"></i>
-                  <a
-                    href="mailto:info@orianbloom.com"
-                    class="mb-0 text text-decoration-none text-size-16"
-                    >info@orianbloom.com</a
-                  >
-                </li>
-                <li class="text">
-                  <i
-                    class="fa-solid fa-location-dot footer-location footer-location3"
-                  ></i>
-                  <p class="text1 text-size-16">
-                    125, 5th Main Road, JP Nagar, Bengaluru, India
-                  </p>
-                </li>
-              </ul>
+          <!-- Copyright -->
+          <div class="copyright">
+            <div class="row">
+              <div class="col-12">
+                <p class="mb-0 text-size-16">
+                  © 2025 <strong>OrionBloom</strong>. All Rights Reserved.
+                  Crafted with ❤️ by OrionBloom Digital Studio.
+                </p>
+              </div>
             </div>
-          </div>
-
-          <!-- Newsletter Signup -->
-        
-        </div>
-      </div>
-
-      <!-- Copyright -->
-      <div class="copyright">
-        <div class="row">
-          <div class="col-12">
-            <p class="mb-0 text-size-16">
-              © 2025 <strong>OrianBloom</strong>. All Rights Reserved. Crafted
-              with ❤️ by OrianBloom Digital Studio.
-            </p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
 
     <!-- PRE LOADER -->
     <div class="js">
