@@ -28,7 +28,7 @@ Project:  Keywordly
 :root {
     --e-global-color-primary: #ffffff;
     --e-global-color-secondary: #19191f;
-    --e-global-color-accent: #ee4619;
+    --e-global-color-accent: #fd901f;
     --e-global-color-text:  #777777;
     --e-global-color-white: #ffffff;
     --e-global-color-black: #000000;
@@ -1254,6 +1254,7 @@ a{
     background: var(--e-global-color-light-grayish-cyan);
     padding-top: 95px;
     position: relative;
+    
 }
 .web_traffic_footer .footer-section .middle-portion{
     padding: 0 0 56px;
